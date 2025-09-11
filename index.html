@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erkan Hasan - Portfolio</title>
+    <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Background gradient animation container */
+.background-animation {
+    position: relative;
+    min-height: 100vh;
+    z-index: 0;
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a1c4fd, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Ensure content is visible and above animated background */
+header, main, footer {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.85); /* Slight transparency */
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Optional: add smooth fade-in for the whole page */
+.background-animation {
+    animation: gradientShift 15s ease infinite, fadeIn 2s ease;
+}
+
+        
+        @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in to main sections */
+.section {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+/* Delay animations for each section */
+.section:nth-of-type(1) { animation-delay: 0.2s; }
+.section:nth-of-type(2) { animation-delay: 0.4s; }
+.section:nth-of-type(3) { animation-delay: 0.6s; }
+.section:nth-of-type(4) { animation-delay: 0.8s; }
+.section:nth-of-type(5) { animation-delay: 1s; }
+.section:nth-of-type(6) { animation-delay: 1.2s; }
+
+/* Hover zoom effect for school images and header img */
+header img,
+.school-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header img:hover,
+.school-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth link transitions */
+a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Optional: animate header text on page load */
+header h1, header p.subtitle {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+header h1 {
+    animation-delay: 0.2s;
+}
+
+header p.subtitle {
+    animation-delay: 0.4s;
+}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #2c3e50;
+        }
+
+        header {
+            background: linear-gradient(to right, #2c3e50, #34495e);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin: 10px 0 5px;
+        }
+
+        p.subtitle {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 25px 30px;
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .two-column {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .two-column > div {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .school-entry {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .school-img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        footer {
+            background-color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .school-entry {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .school-img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="background-animation">
+<header>
+    <img src="PHATAN.jpg" alt="Erkan Hasan">
+    <h1>Erkan Hasan</h1>
+    <p class="subtitle">Aspiring student | Sports enthusiast | Future Groningen University student</p>
+</header>
+
+<main>
+    <div class="section">
+        <h2>About Me</h2>
+        <div class="two-column">
+            <div>
+                <p><strong>Born:</strong> July 5, 2009</p>
+                <p>
+                    I'm a passionate student who enjoys sports, learning, and personal development. I believe in hard work,
+                    teamwork, and always striving to become a better version of myself.
+                </p>
+            </div>
+            <div>
+                <p><strong>Sports:</strong> Basketball, Football, Table Tennis</p>
+                <p><strong>Hobbies:</strong> Reading, Exercising, Staying Active</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+
+        <div class="school-entry">
+            <img src="Drujba.jpeg" alt="Drujba School" class="school-img">
+            <div>
+                <h3>Drujba School, Sofia, Bulgaria</h3>
+                <p><strong>Years:</strong> Year 1 – Year 6</p>
+            </div>
+        </div>
+
+        <div class="school-entry">
+            <img src="chinda.jpeg" alt="Chindamanee School" class="school-img">
+            <div>
+                <h3>Chindamanee School, Bangkok, Thailand</h3>
+                <p><strong>Years:</strong> Year 7 – Year 11</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Teamwork and Communication</li>
+            <li>Adaptability and Cultural Awareness</li>
+            <li>Basic Web Development</li>
+            <li>Leadership and Initiative</li>
+            <li>Time Management</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Represented school in basketball tournaments</li>
+            <li>PArticipated in STEAM festival</li>
+            <li>Built and designed my own website portfolio</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Goals</h2>
+        <p>
+            I aspire to study at <strong>Groningen University</strong> to further develop my academic skills,
+            engage with inspiring people, and work towards becoming a leader in my chosen field.
+        </p>
+        <p>My long-term goal is to make a positive difference through hard work, learning, and community involvement.</p>
+    </div>
+
+    <div class="section">
+        <h2>Contact</h2>
+        <p>erkan.h@chindamanee.ac.th</p>
+    </div>
+</body>
